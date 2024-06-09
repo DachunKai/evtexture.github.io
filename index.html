@@ -185,7 +185,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Event-based vision has drawn increasing attention due to its unique characteristics, such as high temporal resolution and high dynamic range. It has been used in video super-resolution (VSR) recently to enhance the flow estimation and temporal alignment. Rather than for motion learning, we propose in this paper the first VSR method that utilizes event signals for texture enhancement. Our method, called EvTexture, leverages high-frequency details of events to better recover texture regions in VSR. In our EvTexture, a new texture enhancement branch is presented. We further introduce an iterative texture enhancement module to progressively explore the high-temporal-resolution event information for texture restoration. This allows for gradual refinement of texture regions across multiple iterations, leading to more accurate and rich high-resolution details. Experimental results show that our EvTexture achieves state-of-the-art performance on four datasets. For the Vid4 dataset with rich textures, our method can get up to 4.67dB gain compared with recent event-based methods.
+            Event-based vision has drawn increasing attention due to its unique characteristics, such as high temporal resolution and high dynamic range. It has been used in video super-resolution (VSR) recently to enhance the flow estimation and temporal alignment. Rather than for motion learning, we propose in this paper the first VSR method that utilizes event signals for texture enhancement. Our method, called EvTexture, leverages high-frequency details of events to better recover texture regions in VSR. In our EvTexture, a new texture enhancement branch is presented. We further introduce an iterative texture enhancement module to progressively explore the high-temporal-resolution event information for texture restoration. This allows for gradual refinement of texture regions across multiple iterations, leading to more accurate and rich high-resolut ion details. Experimental results show that our EvTexture achieves state-of-the-art performance on four datasets. For the Vid4 dataset with rich textures, our method can get up to 4.67dB gain compared with recent event-based methods.
           </p>
         </div>
       </div>
@@ -194,11 +194,66 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Method Comparision -->
+<section class="section">
+  <div class="container">
+    <!-- Comparisons. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">VSR Methods Comparisons</h2>
+        <image src="static/images/Comparison.png" class="img-responsive" alt="comparison"><br>
+        <div class="content has-text-justified">
+        <p>
+        <b>(a)</b> RGB-based methods usually focus on motion leaning to recover the missing details from other unaligned frames. <b>(b)</b> Previous event-based methods have attempted to use events to enhance the motion learning. <b>(c)</b> In contrast, our method is the first to utilize events to enhance the texture restoration in VSR. The <span style="color:red; font-weight:bold;">red</span> dotted line is an optional branch, where our method can easily adapt to approaches that use events to enhance the motion learning. 
+        </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End Method Comparision -->
+
+<!-- Network Architecture -->
+<section class="section">
+  <div class="container">
+    <!-- Comparisons. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Network Architecture</h2>
+        <image src="static/images/EvTexture_arch.png" class="img-responsive" alt="comparison"><br>
+        <div class="content has-text-justified">
+        <p>
+          <b>(a)</b> Following <a target="_blank" rel="noopener noreferrer" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_BasicVSR_The_Search_for_Essential_Components_in_Video_Super-Resolution_and_CVPR_2021_paper.pdf">BasicVSR</a>, our EvTexture adopts a bidirectional recurrent network, where features are propagated forward and backward. At each timestamp, it includes a motion branch and a parallel texture branch to explicitly enhance the restoration of texture regions. <b>(b)</b> In the texture branch, the ITE module plays a key role. It progressively refines the feature across multiple iterations, leveraging high-frequency textural information from events along with context information from the current frame.
+        </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End Network Architecture -->
+
+
+<!-- Quantitative Results -->
+<section class="section">
+  <div class="container">
+    <!-- Comparisons. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Network Architecture</h2>
+        <image src="static/images/quantitative.png" class="img-responsive" alt="comparison"><br>
+        <div class="content has-text-justified">
+        <p>
+          Quantitative comparison (PSNR↑/SSIM↑) on <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/sota/video-super-resolution-on-vid4-4x-upscaling">Vid4</a>, <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/dataset/reds">REDS4</a> and <a target="_blank" rel="noopener noreferrer" href="http://toflow.csail.mit.edu/">Vimeo-90K-T</a> for 4&times; VSR. All results are calculated on Y-channel except REDS4 (RGB-channel). The input types "I" and "I+E" represent RGB-based and event-based methods, respectively. <span style="color:red; font-weight:bold;">Red</span> and <span style="color:blue; text-decoration:underline;">blue</span> colors indicate the best and second-best performances, respectively.
+        </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End Quantitative Results -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
@@ -239,7 +294,8 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>        @inproceedings{kai2024evtexture,
+      <pre><code> 
+      @inproceedings{kai2024evtexture,
         title={Ev{T}exture: {E}vent-driven {T}exture {E}nhancement for {V}ideo {S}uper-{R}esolution},
         author={Kai, Dachun and Lu, Jiayao and Zhang, Yueyi and Sun, Xiaoyan},
         booktitle={International Conference on Machine Learning},
