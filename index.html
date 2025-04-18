@@ -5,7 +5,7 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="Event-based Video Super-Resolution">
-  <meta property="og:title" content="Event-Enhanced Blurry Video Super-Resolution"/>
+  <meta property="og:title" content="EvTexture: Event-driven Texture Enhancement for Video Super-Resolution"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
@@ -20,12 +20,12 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="Video Super-Resolution, Event Camera, Video Deblur">
+  <meta name="keywords" content="Video Super-Resolution, Event Camera, Texture Enhancement">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Event-Enhanced Blurry Video Super-Resolution</title>
-  <link rel="icon" type="image/x-icon" href="static/images/EvDeblurVSR.ico">
+  <title>EvTexture: Event-driven Texture Enhancement for Video Super-Resolution</title>
+  <link rel="icon" type="image/x-icon" href="static/images/EvTexture.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,24 +52,16 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Event-Enhanced Blurry Video Super-Resolution</h1>
+            <h1 class="title is-1 publication-title">EvTexture: Event-driven Texture Enhancement for Video Super-Resolution</h1>
 
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://github.com/DachunKai" target="_blank">Dachun Kai<sup>1</sup></a>,</span>
-              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Jiayao Lu<sup>1</sup></a>,</span>
               <span class="author-block">
                 <a href="https://scholar.google.com.hk/citations?user=LatWlFAAAAAJ&hl=zh-CN&oi=ao" target="_blank">Yueyi Zhang<sup>† 1 2</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="https://github.com/booker-max" target="_blank">Jin Wang<sup>1</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="https://dblp.org/pid/276/3139.html" target="_blank">Zeyu Xiao<sup>3</sup></a>,
-              </span>
-              <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=Snl0HPEAAAAJ&hl=zh-CN" target="_blank">Zhiwei Xiong<sup>1 2</sup></a>,
               </span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=VRG3dw4AAAAJ&hl=zh-CN" target="_blank">Xiaoyan Sun<sup>1 2</sup></a>
@@ -82,12 +74,11 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block"><small><sup>1</sup>University of Science and Technology of China</small></span>
-              <span class="author-block"><small><sup>2</sup>Institute of Artificial Intelligence, Hefei Comprehensive National Science Center</small></span><br>
-              <span class="author-block"><small><sup>3</sup>National University of Singapore</small></span>
-            </div>                     
+              <span class="author-block"><small><sup>2</sup>Institute of Artificial Intelligence, Hefei Comprehensive National Science Center</small></span>
+            </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block", style="color:#346dc2">AAAI 2025</span>
+              <span class="author-block", style="color:#346dc2">ICML 2024</span>
             </div>
             
 
@@ -118,18 +109,18 @@
 
                   <!-- ArXiv abstract Link -->
                   <span class="link-block">
-                    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/32438" target="_blank"
+                    <a href="https://arxiv.org/abs/2406.13457" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
-                    <span>Paper</span>
+                    <span>arXiv</span>
                   </a>
                 </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/DachunKai/Ev-DeblurVSR" target="_blank"
+                    <a href="https://github.com/DachunKai/EvTexture" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -139,7 +130,7 @@
                 </span>
 
                 <!-- Poster link -->
-                <!-- <span class="link-block">
+                <span class="link-block">
                   <a href="https://docs.google.com/presentation/d/1nbDb39TFb374DzBwdz5v20kIREUA0nBH/edit?usp=sharing" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -147,7 +138,7 @@
                     </span>
                     <span>Poster</span>
                   </a>
-                </span> -->
+                </span>
             </div>
           </div>
         </div>
@@ -166,28 +157,28 @@
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/GOPR0384_11_00.mp4"
+            <source src="static/videos/REDS_000.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/GOPR0396_11_00.mp4"
+            <source src="static/videos/REDS_011.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
-            <source src="static/videos/GOPR0410_11_00.mp4"
+            <source src="static/videos/REDS_015.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
             <!-- Your video file here -->
-            <source src="static/videos/GOPR0871_11_00.mp4"
+            <source src="static/videos/REDS_020.mp4"
             type="video/mp4">
           </video>
         </div>
@@ -205,7 +196,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this paper, we tackle the task of blurry video super-resolution (BVSR), aiming to generate high-resolution (HR) videos from low-resolution (LR) and blurry inputs. Current BVSR methods often fail to restore sharp details at high resolutions, resulting in noticeable artifacts and jitter due to insufficient motion information for deconvolution and the lack of high-frequency details in LR frames. To address these challenges, we introduce event signals into BVSR and propose a novel event-enhanced network, Ev-DeblurVSR. To effectively fuse information from frames and events for feature deblurring, we introduce a reciprocal feature deblurring module that leverages motion information from intra-frame events to deblur frame features while reciprocally using global scene context from the frames to enhance event features. Furthermore, to enhance temporal consistency, we propose a hybrid deformable alignment module that fully exploits the complementary motion information from inter-frame events and optical flow to improve motion estimation in the deformable alignment process. Extensive evaluations demonstrate that Ev-DeblurVSR establishes a new state-of-the-art performance on both synthetic and real-world datasets. Notably, on real data, our method is +2.59dB more accurate and 7.28&times; faster than the recent best BVSR baseline FMA-Net.
+            Event-based vision has drawn increasing attention due to its unique characteristics, such as high temporal resolution and high dynamic range. It has been used in video super-resolution (VSR) recently to enhance the flow estimation and temporal alignment. Rather than for motion learning, we propose in this paper the first VSR method that utilizes event signals for texture enhancement. Our method, called EvTexture, leverages high-frequency details of events to better recover texture regions in VSR. In our EvTexture, a new texture enhancement branch is presented. We further introduce an iterative texture enhancement module to progressively explore the high-temporal-resolution event information for texture restoration. This allows for gradual refinement of texture regions across multiple iterations, leading to more accurate and rich high-resolut ion details. Experimental results show that our EvTexture achieves state-of-the-art performance on four datasets. For the Vid4 dataset with rich textures, our method can get up to 4.67dB gain compared with recent event-based methods.
           </p>
         </div>
       </div>
@@ -215,10 +206,10 @@
 <!-- End paper abstract -->
 
 <!-- Motivation -->
-<!-- <section class="section">
-  <div class="container"> -->
+<section class="section">
+  <div class="container">
     <!-- Comparisons. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Motivation</h2>
         <image src="static/images/motivation.png" class="img-responsive" alt="comparison"><br>
@@ -229,14 +220,14 @@
         </div>
       </div>
     </div>
-</section> -->
+</section>
 <!-- End Motivation -->
 
 <!-- Method Comparision -->
-<!-- <section class="section">
-  <div class="container"> -->
+<section class="section">
+  <div class="container">
     <!-- Comparisons. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">VSR Methods Comparisons</h2>
         <image src="static/images/Comparison.png" class="img-responsive" alt="comparison"><br>
@@ -247,7 +238,7 @@
         </div>
       </div>
     </div>
-</section> -->
+</section>
 <!-- End Method Comparision -->
 
 <!-- Network Architecture -->
@@ -257,10 +248,11 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Network Architecture</h2>
-        <image src="static/images/EvDeblurVSR_arch.png" class="img-responsive" alt="comparison"><br>
+        <image src="static/images/EvTexture_arch.png" class="img-responsive" alt="comparison"><br>
         <div class="content has-text-justified">
         <p>
-          Overview of Ev-DeblurVSR. Intra-frame voxels, which record the exposure time information of blurry frames, are fused with blurry frames in the RFD module to deblur frame features and enhance event features with scene context. Inter-frame voxels, which record motion information between frames, are integrated into the HDA module, using continuous motion trajectories to guide deformable alignment. Finally, the aligned features are upsampled to reconstruct sharp HR frames.
+          <b>(a)</b> Following <a target="_blank" rel="noopener noreferrer" href="https://openaccess.thecvf.com/content/CVPR2021/papers/Chan_BasicVSR_The_Search_for_Essential_Components_in_Video_Super-Resolution_and_CVPR_2021_paper.pdf">BasicVSR</a>, our EvTexture adopts a bidirectional recurrent network, where features are propagated forward and backward. At each timestamp, it includes a motion branch and a parallel texture branch to explicitly enhance the restoration of texture regions. <b>(b)</b> In the texture branch, the ITE module plays a key role. It progressively refines the feature across multiple iterations, leveraging high-frequency textural information from events along with context information from the current frame.
+        </p>
         </div>
       </div>
     </div>
@@ -277,9 +269,9 @@
         <h2 class="title is-3">Quantitative Results</h2>
         <image src="static/images/quantitative.png" class="img-responsive" alt="comparison"><br>
         <div class="content has-text-justified">
-          <p>
-            Quantitative comparison (PSNR↑/SSIM↑/LPIPS↓) on the <a target="_blank" rel="noopener noreferrer" href="https://seungjunnah.github.io/Datasets/gopro.html">GoPro</a> dataset for 4× blurry VSR. More comparisons on <a target="_blank" rel="noopener noreferrer" href="https://github.com/zzh-tech/ESTRNN">BSD</a> and <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/view/neid2023">NCER</a> datasets are available in our paper.
-          </p>          
+        <p>
+          Quantitative comparison (PSNR↑/SSIM↑) on <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/sota/video-super-resolution-on-vid4-4x-upscaling">Vid4</a>, <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/dataset/reds">REDS4</a> and <a target="_blank" rel="noopener noreferrer" href="http://toflow.csail.mit.edu/">Vimeo-90K-T</a> for 4&times; VSR. All results are calculated on Y-channel except REDS4 (RGB-channel). The input types "I" and "I+E" represent RGB-based and event-based methods, respectively. <span style="color:red; font-weight:bold;">Red</span> and <span style="color:blue; text-decoration:underline;">blue</span> colors indicate the best and second-best performances, respectively.
+        </p>
         </div>
       </div>
     </div>
@@ -294,25 +286,32 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/quanlitative_gopro.png" alt="MY ALT TEXT"/>
+        <img src="static/images/quanlitative_vid4.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://seungjunnah.github.io/Datasets/gopro.html">GoPro</a> for 4&times; blurry VSR.
+          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/sota/video-super-resolution-on-vid4-4x-upscaling">Vid4</a> for 4&times; VSR.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/quanlitative_bsd.png" alt="MY ALT TEXT"/>
+        <img src="static/images/quanlitative_vimeo.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://github.com/zzh-tech/ESTRNN">BSD</a> for 4&times; blurry VSR.
+          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="http://toflow.csail.mit.edu/">Vimeo-90K-T</a> for 4&times; VSR.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/quanlitative_ncer.png" alt="MY ALT TEXT"/>
+        <img src="static/images/quanlitative_reds.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/view/neid2023">NCER</a> for 4&times; blurry VSR. NCER is a real-world event dataset.
+          Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://paperswithcode.com/dataset/reds">REDS4</a> for 4&times; VSR.
        </h2>
      </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/quanlitative_ced.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Qualitative comparison on <a target="_blank" rel="noopener noreferrer" href="https://rpg.ifi.uzh.ch/CED.html">CED</a> for 4&times; VSR.
+      </h2>
+    </div>
   </div>
 </div>
 </div>
@@ -324,14 +323,14 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{kai2025event,
-  title={Event-{E}nhanced {B}lurry {V}ideo {S}uper-{R}esolution},
-  author={Kai, Dachun and Zhang, Yueyi and Wang, Jin and Xiao, Zeyu and Xiong, Zhiwei and Sun, Xiaoyan},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={39},
-  number={4},
-  pages={4175--4183},
-  year={2025}
+      <pre><code>@inproceedings{kai2024evtexture,
+  title={{E}v{T}exture: {E}vent-driven {T}exture {E}nhancement for {V}ideo {S}uper-{R}esolution},
+  author={Kai, Dachun and Lu, Jiayao and Zhang, Yueyi and Sun, Xiaoyan},
+  booktitle={Proceedings of the 41st International Conference on Machine Learning},
+  pages={22817--22839},
+  year={2024},
+  volume={235},
+  publisher={PMLR}
 }</code></pre>
     </div>
 </section>
